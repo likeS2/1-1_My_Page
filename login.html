@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>Log In</title>
+		<style type="text/css">
+
+			.layer {
+				position:absolute; 
+				top:50%; 
+				left:50%;
+				width:200px; 
+				height:200px; 
+				background:lightpink; 
+				margin: -100px 0 0 -100px;
+			}
+
+			table {
+				margin:auto;
+				margin-left:auto;
+				margin-right:auto;
+				width:200px;
+				max-width:200px;
+				min-width:200px;
+				height:200px;
+				max-height:200px;
+				min-height:200px;
+				background-color:skyblue;
+				font-family:"Arial";
+				text-align: center;
+			}
+
+			.layer .tr1 {
+				font-size: 20px;
+				color: white;
+				font-weight: bold;
+			}
+			
+		</style>
+
+		<script>
+			var my_id = "whdkgp97";
+			var my_pw = "1234!";
+
+			var username;
+			var userpw;
+
+/* 아이디, 비번 틀려도 계속 넘어감 ㅠㅠ */
+
+			if (my_id == document.getElementById("userid").value) {
+				if (pw == document.getElementById("userpw").value) {
+					location.href="/mainpage.html"
+					} else {
+						alert("비밀번호가 일치하지 않습니다.");
+						location.reload();
+					}
+				} else {
+					alert("존재하지 않는 아이디입니다.");
+						location.reload();
+				}
+		</script>
+
+	</head>
+
+	<body>
+		<form action="/mainpage.html">
+			<table class="layer">
+				<thead>
+			 	</thead>
+				<tbody>
+		 			<tr class='tr1'>
+					<td>Log In</td>
+		 			</tr>
+		 			<tr>
+		 				<td><input type="text" id="userid" name="username" placeholder="User ID*" required></td>
+			 		</tr>
+			 		<tr>
+			 			<td><input type="password" id="userpw" name="userpw" placeholder="Password*" required></td>
+			 		</tr>
+			 		<tr>
+			 			<td><input type="submit" value="Login"></td>
+					</tr>
+		 			<tr>
+		 				<td><input type="submit" value="SignUp"></td>
+			 		</tr>
+					<tr>
+		 				<td><a href="#" style="color:white" class="btn"> Forgot password? </a></td>
+		 			</tr>
+				</tbody>
+		 		<tfoot>
+		 		</tfoot>
+		 	</table>
+		</form>
+		
